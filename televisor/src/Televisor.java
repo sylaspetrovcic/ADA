@@ -35,6 +35,8 @@ public class Televisor {
             }
         void desligarTelevisao(){
             ligado = false;
+            canal = 16;
+            volume = 5;
             }
         void mostrarStatus(){
             System.out.println("Canal :" + canal + " Volume :" + volume + " Televisão ligada ? " + ligado);
