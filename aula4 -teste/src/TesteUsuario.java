@@ -16,6 +16,7 @@ public class TesteUsuario {
                 LocalDate.of(1958,9,8));
         operacoesUsuarios.salvarUsuario(usuario2);
         ArrayList<Usuario> usuariosSalvos = operacoesUsuarios.getUsuariosDoBancoDeDados();
+        operacoesUsuarios.excluirUsuario(usuario1);
 
         for (Usuario item: usuariosSalvos
              ) {

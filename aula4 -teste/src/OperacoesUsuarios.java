@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 
 public class OperacoesUsuarios {
-    ArrayList<Usuario>usuariosDoBancoDeDados;
+   private ArrayList<Usuario>usuariosDoBancoDeDados;
 public OperacoesUsuarios(){
     this.usuariosDoBancoDeDados = new ArrayList<>();
 }
 
     public void salvarUsuario(Usuario usuario)  {
         boolean emailJaExistente = false;
-        for (Usuario u : usuariosDoBancoDeDados) {
+        for (Usuario u : this.usuariosDoBancoDeDados) {
             if (u.getEmail().equals(usuario.getEmail())) {
                 emailJaExistente = true;
                 break;
@@ -23,10 +23,14 @@ public OperacoesUsuarios(){
         }
         }
 
-    public ArrayList<Usuario> getUsuariosDoBancoDeDados() {
-        return usuariosDoBancoDeDados;
+   public void excluirUsuario(Usuario usuario){
+       usuariosDoBancoDeDados.remove(usuario);
+       System.out.println("Usuario removido : " + usuario.getNome() );
     }
 
-     {
+    public ArrayList<Usuario> getUsuariosDoBancoDeDados() {
+        return this.usuariosDoBancoDeDados;
     }
+
+
 }
