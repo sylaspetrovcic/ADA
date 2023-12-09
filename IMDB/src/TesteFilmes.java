@@ -14,12 +14,10 @@ public class TesteFilmes {
                 "Natalie Portman", "Chris Tenzis", "Charles Melton", "Julianne Moore"},117,
                 "Todd Haynes");
         operacaoFilmes.salvarFilme(filme2);
+        operacaoFilmes.pesquisar("como se fosse a primeira vez");
 
-
-
-        ArrayList<Filme>filmeSalvos = operacaoFilmes.getUsuariosDoBancoDeDados();
         operacaoFilmes.excluir("segredos de um escândalo");
-
+        ArrayList<Filme>filmeSalvos = operacaoFilmes.getUsuariosDoBancoDeDados();
         for(Filme item : filmeSalvos ){
             System.out.println("Filmes salvos no banco de dados : " + item.getTitulo());
         }
