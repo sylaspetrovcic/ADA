@@ -18,7 +18,7 @@ public class TesteFilmes {
 
 
         ArrayList<Filme>filmeSalvos = operacaoFilmes.getUsuariosDoBancoDeDados();
-        operacaoFilmes.excluir("Segredos de um escândalo");
+        operacaoFilmes.excluir("segredos de um escândalo");
 
         for(Filme item : filmeSalvos ){
             System.out.println("Filmes salvos no banco de dados : " + item.getTitulo());

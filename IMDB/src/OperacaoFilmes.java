@@ -31,8 +31,8 @@ class OperacoesFilmes {
 
         while (((Iterator<?>) iterator).hasNext()) {
             Filme filme = iterator.next();
-
-            if (filme.getTitulo().equals(titulo)) {
+            if(filme.getTitulo().equalsIgnoreCase(titulo)){
+            if (filme.getTitulo().equals(titulo))
                 System.out.println("Removendo título " + titulo);
                 iterator.remove(); // Remove o filme encontrado usando o iterador
                 encontrado = true;
